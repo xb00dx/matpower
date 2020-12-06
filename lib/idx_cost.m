@@ -1,4 +1,4 @@
-function [PW_LINEAR, POLYNOMIAL, MODEL, STARTUP, SHUTDOWN, NCOST, COST] = idx_cost
+function [PW_LINEAR, POLYNOMIAL, MODEL, STARTUP, SHUTDOWN, NCOST, COST, PW_QUADRATIC] = idx_cost
 %IDX_COST   Defines constants for named column indices to gencost matrix.
 %   Example:
 %
@@ -33,6 +33,7 @@ function [PW_LINEAR, POLYNOMIAL, MODEL, STARTUP, SHUTDOWN, NCOST, COST] = idx_co
 %   additional constants, used to assign/compare values in the MODEL column
 %    1  PW_LINEAR   piecewise linear generator cost model
 %    2  POLYNOMIAL  polynomial generator cost model
+%    3  PW_QUADRATIC   piecewise quadratic generator cost model
 %
 %   See also DEFINE_CONSTANTS.
 
@@ -47,6 +48,7 @@ function [PW_LINEAR, POLYNOMIAL, MODEL, STARTUP, SHUTDOWN, NCOST, COST] = idx_co
 %% define cost models
 PW_LINEAR   = 1;
 POLYNOMIAL  = 2;
+PW_QUADRATIC = 3;
 
 %% define the indices
 MODEL       = 1;    %% cost model, 1 = piecewise linear, 2 = polynomial 
